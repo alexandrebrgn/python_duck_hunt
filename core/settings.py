@@ -1,3 +1,3 @@
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
-SCREEN_TITLE = "Titre de votre jeu"
+SCREEN_TITLE = "Duck Hunt"

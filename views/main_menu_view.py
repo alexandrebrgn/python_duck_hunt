@@ -16,3 +16,4 @@ class MenuView(arcade.View):
         if key == arcade.key.SPACE:
             game_view = GameView()
             self.window.show_view(game_view)
+

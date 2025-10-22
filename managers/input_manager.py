@@ -22,3 +22,4 @@ class InputManager:
     def on_key_release(self, symbol):
         for key in self.keys_pressed:
             self.keys_pressed[key] = False
+
