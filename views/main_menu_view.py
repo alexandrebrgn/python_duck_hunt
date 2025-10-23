@@ -9,8 +9,11 @@ class MenuView(arcade.View):
 
     def on_draw(self):
         self.clear()
-        arcade.draw_text("MENU PRINCIPAL", self.window.width/2, self.window.height/2 + 50, arcade.color.WHITE, 40, anchor_x="center")
-        arcade.draw_text("Appuyez sur ESPACE pour commencer", self.window.width/2, self.window.height/2, arcade.color.LIGHT_GRAY, 20, anchor_x="center")
+        arcade.load_font("assets/fonts/ka1.ttf")
+        arcade.draw_text("MENU PRINCIPAL", self.window.width/2, self.window.height/2 + 50, arcade.color.WHITE,
+                         40, anchor_x="center", font_name="Karmatic Arcade")
+        arcade.draw_text("Appuyez sur ESPACE pour commencer", self.window.width/2, self.window.height/2,
+                         arcade.color.LIGHT_GRAY, 20, anchor_x="center", font_name="Karmatic Arcade")
 
     def on_key_press(self, key, modifiers):
         if key == arcade.key.SPACE:
