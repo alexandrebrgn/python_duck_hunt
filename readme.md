@@ -10,7 +10,6 @@ Un petit jeu de tir inspiré du classique Duck Hunt, développé en Python avec 
 - Tir à la souris
 - Interface simple et rétro
 - Animations avec spritesheets déssinées sur [Piskel](https://www.piskelapp.com/)
-- 
 
 ## 🛠️ Installation
 
