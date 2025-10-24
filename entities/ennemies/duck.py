@@ -19,6 +19,7 @@ class Duck(arcade.Sprite):
         self.frame_count = 0
 
     def update(self, my_screen, player, delta_time: float = 1/ 60):
+        print(my_screen.width)
         self.frame_count += 1
 
         if not self.alive:
