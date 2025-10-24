@@ -9,22 +9,24 @@ Un petit jeu de tir inspiré du classique Duck Hunt, développé en Python avec 
 - Apparition aléatoire de canards
 - Tir à la souris
 - Interface simple et rétro
+- Animations avec spritesheets déssinées sur [Piskel](https://www.piskelapp.com/)
+- 
 
 ## 🛠️ Installation
 
 ### 1. Clone le dépôt :
 ```bash
-   git clone https://github.com/alexandrebrgn/python_duck_hunt.git
-   cd python_duck_hunt
+  git clone https://github.com/alexandrebrgn/python_duck_hunt.git
+  cd python_duck_hunt
 ```
 ### 2. Installer les dépendances :
 ```bash
    pip install -r requirements.txt
 ```
-   _Installer le package python arcade_
+_Installer le package python arcade_
 ## 🚀 Lancer le jeu 
 ```bash
-    python main.py
+  python main.py
 ```
 
 ## 🥀 Améliorations possibles
