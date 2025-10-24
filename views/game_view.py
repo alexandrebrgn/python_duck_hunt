@@ -12,12 +12,11 @@ class GameView(arcade.View):
     def __init__(self):
 
         super().__init__()
-        print(self.window.width)
         self.assets = AssetsManager(self.window)
         self.player = Player()
 
         # Instanciation du premier canard
-        self.directions : list[str] = ["dl", "dr", "l", "r", "u"]
+        self.directions : list[str] = ["DL", "DR", "L", "R", "U"]
         self.duck = None
         self.duck = self.instance_new_duck()
         self.assets.sprite_list.append(self.duck)
@@ -59,7 +58,6 @@ class GameView(arcade.View):
     def on_mouse_press(self, x: int, y: int, button: int, modifiers: int) -> None:
 
         if self.duck.check_hit(self.assets.sight_x, self.assets.sight_y):
-            print(f"{x} et {y} {button} {modifiers}")
             self.player.gold += 10
             self.player.kills += 1
 
@@ -78,14 +76,14 @@ class GameView(arcade.View):
 
     def instance_new_duck(self):
 
-        direction = random.choice(["dl", "dr", "l", "r", "u"])
-        if direction == "dl":
+        direction = random.choice(["DL", "DR", "L", "R", "U"])
+        if direction == "DL":
             duck = Duck(self.speed, self.assets, self.assets.texture_dl_list, direction)
-        elif direction == "dr":
+        elif direction == "DR":
             duck = Duck(self.speed, self.assets, self.assets.texture_dr_list, direction)
-        elif direction == "r":
+        elif direction == "R":
             duck = Duck(self.speed, self.assets, self.assets.texture_r_list, direction)
-        elif direction == "u":
+        elif direction == "U":
             duck = Duck(self.speed, self.assets, self.assets.texture_u_list, direction)
         else:
             duck = Duck(self.speed, self.assets, self.assets.texture_l_list, direction)

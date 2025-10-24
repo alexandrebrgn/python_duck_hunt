@@ -19,7 +19,6 @@ class Duck(arcade.Sprite):
         self.frame_count = 0
 
     def update(self, my_screen, player, delta_time: float = 1/ 60):
-        print(my_screen.width)
         self.frame_count += 1
 
         if not self.alive:
@@ -31,16 +30,16 @@ class Duck(arcade.Sprite):
             self.set_texture(self.current_texture_index)
 
         # Gérer le déplacement du canard
-        if self.direction == "l":
+        if self.direction == "L":
             self.center_x -= self.speed
-        elif self.direction == "r":
+        elif self.direction == "R":
             self.center_x += self.speed
-        elif self.direction == "u":
+        elif self.direction == "U":
             self.center_y += self.speed
-        elif self.direction == "dl":
+        elif self.direction == "DL":
             self.center_x -= self.speed
             self.center_y += self.speed / 2
-        elif self.direction == "dr":
+        elif self.direction == "DR":
             self.center_x += self.speed
             self.center_y += self.speed / 2
 
@@ -64,23 +63,17 @@ class Duck(arcade.Sprite):
 
     # Gérer l'apparition du canard
     def choose_x_y(self, direction):
-        if direction == "dl":
-            print("dl")
+        if direction == "DL":
             self.center_x = random.randint(600, 900)
             self.center_y = random.randint(150, 200)
-        elif direction == "dr":
-            print("dr")
+        elif direction == "DR":
             self.center_x = random.randint(100, 400)
             self.center_y = random.randint(150, 200)
-        elif direction == "l":
-            print("l")
+        elif direction == "L":
             self.center_x = 900
             self.center_y = random.randint(300, 450)
-        elif direction == "r":
-            print("r")
-            self.center_x = 50
+        elif direction == "R":
             self.center_y = random.randint(300, 450)
-        elif direction == "u":
-            print("u")
+        elif direction == "U":
             self.center_x = random.randint(200, 980)
             self.center_y = 150

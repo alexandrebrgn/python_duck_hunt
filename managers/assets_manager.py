@@ -41,7 +41,6 @@ class AssetsManager:
 
         self.sight = arcade.Sprite("assets/images/icons/cible.png", 0.1)
         self.sprite_list2.append(self.sight)
-        print(window.width, window.height)
         self.sight_x = window.width / 2
         self.sight_y = window.height / 2
         self.sight.center_x = self.sight_x
