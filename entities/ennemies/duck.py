@@ -25,7 +25,7 @@ class Duck(arcade.Sprite):
             return
 
         # Gérer l'animation du canard
-        if self.frame_count % 15 == 0:
+        if self.frame_count % round(25 /self.speed) == 0:
             self.current_texture_index = (self.current_texture_index + 1) % len(self.textures)
             self.set_texture(self.current_texture_index)
 
